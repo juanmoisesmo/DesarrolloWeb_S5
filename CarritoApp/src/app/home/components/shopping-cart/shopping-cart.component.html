@@ -1,0 +1,36 @@
+<cart-cart-header></cart-cart-header>
+<div class="panel panel-default">
+    <div class="panel-heading clearfix">
+        <h3 class="pull-left">
+            Carrito de compras
+        </h3>
+    </div>
+    <div class="panel panel-body">
+        <div class="container">
+            <div class="col-sm-6">
+                <div *ngFor="let item of shoppingCartItems">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card mb-3">
+                                <div class="card-block">
+                                    <div class="col-sm-4">
+                                        <img class="card-img-top image-grid-cart" src="{{item.productImage}}">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <h5 class="card-title">{{item.productName}}</h5>
+                                        <h5 class="card-title">Unidades: {{item.productQuantity}}</h5>
+                                        <h5 class="card-title">Subtotal: {{item.subTotal | number : '1.2' }}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h4>Pagar</h4>
+            </div>
+        </div>
+    </div>
+</div>

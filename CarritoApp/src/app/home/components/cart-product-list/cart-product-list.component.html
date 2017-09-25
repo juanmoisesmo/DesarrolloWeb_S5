@@ -1,0 +1,14 @@
+<div class="panel panel-body">
+    <input type="text" id="search" class="form-control" [(ngModel)]="query" placeholder="¿Qué estas buscando?">
+    <br>
+    <div class="row">
+        <div *ngFor="let item of items  | search:'id,name':query">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <cart-cart-product [id]="item.id" [name]="item.name" [precio]="item.precio" [stock]="item.stock" [image]="item.image" [quantity]="item.quantity">
+                    </cart-cart-product>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<cart-cart-header></cart-cart-header>
+<div class="panel panel-default">
+    <div class="panel-heading clearfix">
+        <h3 class="pull-left">
+            {{product.name}}
+        </h3>
+    </div>
+    <div class="panel panel-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="{{product.image}}" class="image-detail" />
+            </div>
+            <div class="col-sm-6">
+                <div class="caption">
+                    <h5>Precio: {{getCurrency()}} {{product.precio | number : '1.2' }}</h5>
+                    <h5>Unidades disponibles: {{product.stock}}</h5>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-sm-2">
+            <button type="button" (click)="back();" class="btn btn-default grid-width-control pull-right">Atrás</button>
+        </div>
+    </div>
+</div>
